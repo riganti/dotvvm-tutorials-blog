@@ -1,0 +1,62 @@
+﻿@viewModel DotvvmBlog.ViewModels.RegisterViewModel, DotvvmBlog
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="~/temporary.css" rel="stylesheet" />
+</head>
+<body>
+
+    <form DataContext="{value: Data}">
+        <div>
+            Display Name: 
+            <dot:TextBox Text="{value: FullName}" />
+        </div>
+        <div>
+            E-mail Address:
+            <dot:TextBox Text="{value: Email}" />
+        </div>
+        <div>
+            Password:
+            <dot:TextBox Text="{value: Password}" Type="Password" />
+        </div>
+        <div>
+            Repeat the password:
+            <dot:TextBox Text="{value: Password2}" Type="Password" />
+        </div>
+        <div>
+            Blog Description:
+            <dot:TextBox Text="{value: BlogDescription}" Type="MultiLine" />
+        </div>
+        <div>
+            Blog Category:
+            <dot:ComboBox DataSource="{value: _root.Categories}"
+                            DisplayMember="Name"
+                            ValueMember="Id"
+                            SelectedValue="{value: BlogCategoryId}" />
+        </div>
+        <div>
+            Theme:
+            <dot:RadioButton Text="dark" CheckedValue="Dark" CheckedItem="{value: ThemeName}" />
+            <dot:RadioButton Text="light" CheckedValue="Light" CheckedItem="{value: ThemeName}" />
+        </div>
+        <div>
+            <dot:CheckBox Text="I agree with the terms and conditions" Checked="{value: AgreeWithConditions}" />
+        </div>
+
+        <div>
+            <dot:ValidationSummary Validation.Target="{value: _this}" />
+        </div>
+        <div>
+            <dot:Button Text="Submit" Click="{command: _root.Submit()}" IsSubmitButton="true" />
+        </div>
+    </form>
+
+
+</body>
+</html>
+
+
