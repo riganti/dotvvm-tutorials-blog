@@ -1,0 +1,9 @@
+﻿@viewModel DotvvmBlog.ViewModels.DefaultViewModel, DotvvmBlog
+@masterPage Views/layout.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <p>Welcome to the <strong>DotVVM Community Portal</strong>. This is a sample web site built using DotVVM to demonstrate its features.</p>
+    <p>You can create your own blog for free here and write about anything you like.</p>
+
+</dot:Content>

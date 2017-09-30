@@ -1,0 +1,41 @@
+﻿@viewModel DotvvmBlog.ViewModels.LayoutViewModel, DotvvmBlog
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="temporary.css" rel="stylesheet" />
+
+    <dot:ContentPlaceHolder ID="Header" />
+</head>
+<body>
+
+    <header>
+        <h1>DotVVM Community Portal</h1>
+
+        <nav>
+            <menu>
+                <li class-active="{value: MenuSection == "Home"}">
+                    <dot:RouteLink RouteName="Default">Home</dot:RouteLink>
+                </li>
+                <li class-active="{value: MenuSection == "Register"}">
+                    <dot:RouteLink RouteName="Register">Create My Blog</dot:RouteLink>
+                </li>
+            </menu>
+        </nav>
+    </header>
+ 
+    <main>
+        <dot:ContentPlaceHolder ID="MainContent" />
+    </main>
+
+    <footer>
+        Powered by <a href="https://www.dotvvm.com">DotVVM</a>.
+    </footer>
+
+</body>
+</html>
+
+
